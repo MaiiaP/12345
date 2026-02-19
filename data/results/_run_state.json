@@ -1,0 +1,39 @@
+{
+  "created_at": 1771526323,
+  "model": "gpt-5.1",
+  "workers": 10,
+  "source_dir": "/Users/maya/Desktop/Код/aron/_tmp_src_10_1771526323",
+  "output_dir": "/Users/maya/Desktop/Код/aron/ДОЗЫ_промптотгпт_10препаратов_gpt51_1771526323",
+  "prompt_docx": "/Users/maya/Desktop/Код/aron/промптотгпт.docx",
+  "sample": 0,
+  "seed": null,
+  "selected_files": [
+    "АПИКСАБАН_ЛП-№(004017)-(РГ-RU)_OHLP.json",
+    "БЕТАМЕТАЗОН_ЛП-№(007245)-(РГ-RU)_OHLP.json",
+    "ИбрутинибАМЕДАРТ_ЛП-№(011318)-(РГ-RU)_OHLP.json",
+    "КЛОПИДОГРЕЛ_ЛП-№(009993)-(РГ-RU)_OHLP.json",
+    "МЕТОКЛОПРАМИД_ЛП-№(001548)-(РГ-RU)_OHLP.json",
+    "МЕТОПРОЛОЛ_ЛП-№(007871)-(РГ-RU)_OHLP.json",
+    "ПЕМЕТРЕКСЕД_ЛП-№(002579)-(РГ-RU)_OHLP.json",
+    "Преднизолон_ЛП-№(001381)-(РГ-RU)_OHLP.json",
+    "ТимололАКОС_ЛП-№(000733)-(РГ-RU)_OHLP.json",
+    "Тресиба_ЛП-№(009482)-(РГ-RU)_OHLP.json"
+  ],
+  "completed_files": [
+    "АПИКСАБАН_ЛП-№(004017)-(РГ-RU)_OHLP.json",
+    "БЕТАМЕТАЗОН_ЛП-№(007245)-(РГ-RU)_OHLP.json",
+    "ИбрутинибАМЕДАРТ_ЛП-№(011318)-(РГ-RU)_OHLP.json",
+    "КЛОПИДОГРЕЛ_ЛП-№(009993)-(РГ-RU)_OHLP.json",
+    "МЕТОКЛОПРАМИД_ЛП-№(001548)-(РГ-RU)_OHLP.json",
+    "МЕТОПРОЛОЛ_ЛП-№(007871)-(РГ-RU)_OHLP.json",
+    "ПЕМЕТРЕКСЕД_ЛП-№(002579)-(РГ-RU)_OHLP.json",
+    "Преднизолон_ЛП-№(001381)-(РГ-RU)_OHLP.json",
+    "ТимололАКОС_ЛП-№(000733)-(РГ-RU)_OHLP.json",
+    "Тресиба_ЛП-№(009482)-(РГ-RU)_OHLP.json"
+  ],
+  "failed_files": [],
+  "total_prompt_tokens": 45039,
+  "total_completion_tokens": 15920,
+  "total_tokens": 60959,
+  "total_cost_usd": 0.21549875000000002
+}

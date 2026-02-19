@@ -5,7 +5,7 @@
   ],
   "dosage": [
     {
-      "tags": "adult; Немелкоклеточный рак легкого, местнораспространенный или метастатический, кроме преимущественно плоскоклеточной гистологической формы [C34]; Злокачественная мезотелиома плевры, нерезектабельная [C45.0]",
+      "tags": "adult",
       "indication": {
         "startDosage": 500,
         "dose": 500,
@@ -13,19 +13,211 @@
         "interval": 21,
         "intervalUnit": "DAY",
         "intakeCount": 1,
-        "daily_dose": 23.81,
-        "loading_dose": null,
-        "courseDurationMin": null,
-        "courseDurationMax": null,
-        "courseMaxF": null,
-        "schemaDescription": "500 мг/м2 в виде внутривенной инфузии в течение не менее 10 минут в первый день каждого 21-дневного цикла, в монотерапии или в комбинации с цисплатином"
+        "daily_dose": 500,
+        "courseMaxF": {
+          "expr": "daily_dose",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "Рекомендованная доза препарата Пеметрексед составляет 500 мг/м2 в виде внутривенной инфузии в течение не менее 10 минут в первый день каждого 21-дневного цикла."
+      }
+    },
+    {
+      "tags": "adult; if: в комбинации с цисплатином",
+      "indication": {
+        "startDosage": 500,
+        "dose": 500,
+        "unit": "мг/м2",
+        "interval": 21,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 500,
+        "courseMaxF": {
+          "expr": "daily_dose",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "Рекомендованная доза препарата Пеметрексед составляет 500 мг/м2 в виде внутривенной инфузии в течение не менее 10 минут в первый день каждого 21-дневного цикла. Рекомендованная доза цисплатина составляет 75 мг/м2 в виде внутривенной инфузии в течение 2 часов примерно через 30 минут после завершения инфузии пеметрекседа в первый день каждого 21-дневного цикла."
+      }
+    },
+    {
+      "tags": "adult; if: после химиотерапии",
+      "indication": {
+        "startDosage": 500,
+        "dose": 500,
+        "unit": "мг/м2",
+        "interval": 21,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 500,
+        "courseMaxF": {
+          "expr": "daily_dose",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "Для пациентов с немелкоклеточным раком легкого после химиотерапии рекомендованная доза препарата Пеметрексед составляет 500 мг/м2 в виде внутривенной инфузии в течение 10 минут в первый день каждого 21-дневного цикла."
+      }
+    },
+    {
+      "tags": "adult; if: минимальное АЧН <500/мм3 и минимальное число тромбоцитов ≥50 000/мм3 после предыдущего цикла",
+      "indication": {
+        "startDosage": 375,
+        "dose": 375,
+        "unit": "мг/м2",
+        "interval": 21,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 375,
+        "courseMaxF": {
+          "expr": "daily_dose",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "Минимальное АЧН <500 /мм3 и минимальное число тромбоцитов ≥50 000 /мм3: 75% от предыдущей дозы (пеметрексед и цисплатин)."
+      }
+    },
+    {
+      "tags": "adult; if: минимальное число тромбоцитов <50 000/мм3 без кровотечения после предыдущего цикла",
+      "indication": {
+        "startDosage": 375,
+        "dose": 375,
+        "unit": "мг/м2",
+        "interval": 21,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 375,
+        "courseMaxF": {
+          "expr": "daily_dose",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "Минимальное число тромбоцитов <50 000/мм3, независимо от минимального АЧН: 75% от предыдущей дозы (пеметрексед и цисплатин)."
+      }
+    },
+    {
+      "tags": "adult; if: минимальное число тромбоцитов <50 000/мм3 с кровотечением после предыдущего цикла",
+      "indication": {
+        "startDosage": 250,
+        "dose": 250,
+        "unit": "мг/м2",
+        "interval": 21,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 250,
+        "courseMaxF": {
+          "expr": "daily_dose",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "Минимальное число тромбоцитов <50 000/мм3 с кровотечением, независимо от минимального АЧН: 50% от предыдущей дозы (пеметрексед и цисплатин)."
+      }
+    },
+    {
+      "tags": "adult; if: любая негематологическая токсичность 3 или 4 степени, за исключением воспаления слизистой оболочки",
+      "indication": {
+        "startDosage": 375,
+        "dose": 375,
+        "unit": "мг/м2",
+        "interval": 21,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 375,
+        "courseMaxF": {
+          "expr": "daily_dose",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "Любая токсичность 3 или 4 степени за исключением воспаления слизистой оболочки: 75% от предыдущей дозы пеметрекседа и 75% от предыдущей дозы цисплатина."
+      }
+    },
+    {
+      "tags": "adult; if: диарея, требующая госпитализации, или диарея 3 или 4 степени",
+      "indication": {
+        "startDosage": 375,
+        "dose": 375,
+        "unit": "мг/м2",
+        "interval": 21,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 375,
+        "courseMaxF": {
+          "expr": "daily_dose",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "Диарея, требующая госпитализации (независимо от степени) или диарея 3 или 4 степени: 75% от предыдущей дозы пеметрекседа и 75% от предыдущей дозы цисплатина."
+      }
+    },
+    {
+      "tags": "adult; if: воспаление слизистой оболочки 3 или 4 степени",
+      "indication": {
+        "startDosage": 250,
+        "dose": 250,
+        "unit": "мг/м2",
+        "interval": 21,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 250,
+        "courseMaxF": {
+          "expr": "daily_dose",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "Воспаление слизистой оболочки 3 или 4 степени: 50% от предыдущей дозы пеметрекседа и 100% от предыдущей дозы цисплатина."
+      }
+    },
+    {
+      "tags": "adult; if: нейротоксичность 0–1 степени",
+      "indication": {
+        "startDosage": 500,
+        "dose": 500,
+        "unit": "мг/м2",
+        "interval": 21,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 500,
+        "courseMaxF": {
+          "expr": "daily_dose",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "Степень нейротоксичности 0–1: 100% от предыдущей дозы пеметрекседа и 100% от предыдущей дозы цисплатина."
+      }
+    },
+    {
+      "tags": "adult; if: нейротоксичность 2 степени",
+      "indication": {
+        "startDosage": 500,
+        "dose": 500,
+        "unit": "мг/м2",
+        "interval": 21,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 500,
+        "courseMaxF": {
+          "expr": "daily_dose",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "Степень нейротоксичности 2: 100% от предыдущей дозы пеметрекседа и 50% от предыдущей дозы цисплатина."
       }
     }
   ],
   "administration": {
-    "time": "не указано",
+    "time": "",
     "food": "не указано",
     "form": "раствор для инфузий",
-    "how": "внутривенно, инфузионно"
+    "how": "внутривенно"
   }
 }
