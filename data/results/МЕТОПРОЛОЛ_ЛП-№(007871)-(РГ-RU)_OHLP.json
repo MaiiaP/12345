@@ -2,12 +2,11 @@
   "indications": [
     "Артериальная гипертензия [I10]",
     "Стенокардия [I20]",
-    "Нарушения ритма сердца [I49]",
-    "Суправентрикулярная тахикардия [I47.1]",
-    "Состояние после инфаркта миокарда [I25.2]",
+    "Нарушения ритма сердца, включая суправентрикулярную тахикардию [I47-I49]",
+    "Состояние после инфаркта миокарда [I21-I22]",
     "Функциональные нарушения сердечной деятельности, сопровождающиеся тахикардией []",
     "Профилактика приступов мигрени [G43]",
-    "Гипертиреоз [E05]"
+    "Гипертиреоз (комплексная терапия) [E05]"
   ],
   "dosage": [
     {
@@ -20,15 +19,7 @@
         "intervalUnit": "DAY",
         "intakeCount": 1,
         "daily_dose": 200,
-        "courseDurationMin": "P1Y",
-        "courseDurationMax": "P1Y",
-        "courseMaxF": {
-          "expr": "daily_dose*365",
-          "vars": [
-            "daily_dose"
-          ]
-        },
-        "schemaDescription": "100–200 мг метопролола однократно утром или в два приема (утром и вечером). Длительная гипотензивная терапия."
+        "schemaDescription": "100–200 мг метопролола однократно утром или в два приема (утром и вечером); при необходимости дозу можно увеличить или добавить другое гипотензивное средство. Длительная терапия 100–200 мг/сут снижает сердечно-сосудистую смертность и риск инсульта."
       }
     },
     {
@@ -41,19 +32,11 @@
         "intervalUnit": "DAY",
         "intakeCount": 2,
         "daily_dose": 200,
-        "courseDurationMin": "P1Y",
-        "courseDurationMax": "P1Y",
-        "courseMaxF": {
-          "expr": "daily_dose*365",
-          "vars": [
-            "daily_dose"
-          ]
-        },
-        "schemaDescription": "100–200 мг в сутки в два приема (утром и вечером)."
+        "schemaDescription": "100–200 мг в сутки в два приема (утром и вечером); при необходимости к терапии может быть добавлен другой антиангинальный препарат."
       }
     },
     {
-      "tags": "adult; Нарушения ритма сердца [I49]; Суправентрикулярная тахикардия [I47.1]",
+      "tags": "adult; Нарушения ритма сердца, включая суправентрикулярную тахикардию [I47-I49]",
       "indication": {
         "startDosage": 100,
         "dose": "100-200",
@@ -62,19 +45,11 @@
         "intervalUnit": "DAY",
         "intakeCount": 2,
         "daily_dose": 200,
-        "courseDurationMin": "P1Y",
-        "courseDurationMax": "P1Y",
-        "courseMaxF": {
-          "expr": "daily_dose*365",
-          "vars": [
-            "daily_dose"
-          ]
-        },
-        "schemaDescription": "100–200 мг в сутки в два приема (утром и вечером)."
+        "schemaDescription": "100–200 мг в сутки в два приема (утром и вечером); при необходимости к терапии может быть добавлен другой антиаритмический препарат."
       }
     },
     {
-      "tags": "adult; Состояние после инфаркта миокарда [I25.2]; if: острый период, внутривенное введение",
+      "tags": "adult; Состояние после инфаркта миокарда [I21-I22]",
       "indication": {
         "step1": {
           "startDosage": 5,
@@ -84,10 +59,11 @@
           "intervalUnit": "MINUTE",
           "intakeCount": 3,
           "daily_dose": 15,
-          "courseDurationMin": "PT4M",
-          "courseDurationMax": "PT4M",
+          "loading_dose": 15,
+          "courseDurationMin": "P0D",
+          "courseDurationMax": "P2D",
           "courseMaxF": {
-            "expr": "daily_dose",
+            "expr": "daily_dose*2",
             "vars": [
               "daily_dose"
             ]
@@ -110,28 +86,24 @@
             ]
           }
         },
-        "schemaDescription": "Три болюсные внутривенные инъекции по 5 мг с 2-минутным интервалом. Если пациент хорошо перенес 15 мг, через 15 минут после последней инъекции назначить 50 мг 4 раза в сутки в течение 48 часов."
-      }
-    },
-    {
-      "tags": "adult; Состояние после инфаркта миокарда [I25.2]; if: поддерживающая терапия после инфаркта",
-      "indication": {
-        "startDosage": 200,
-        "dose": 200,
-        "unit": "мг",
-        "interval": 1,
-        "intervalUnit": "DAY",
-        "intakeCount": 2,
-        "daily_dose": 200,
-        "courseDurationMin": "P1Y",
-        "courseDurationMax": "P1Y",
-        "courseMaxF": {
-          "expr": "daily_dose*365",
-          "vars": [
-            "daily_dose"
-          ]
+        "step3": {
+          "startDosage": 200,
+          "dose": 200,
+          "unit": "мг",
+          "interval": 1,
+          "intervalUnit": "DAY",
+          "intakeCount": 2,
+          "daily_dose": 200,
+          "courseDurationMin": "P365D",
+          "courseDurationMax": null,
+          "courseMaxF": {
+            "expr": "daily_dose*365",
+            "vars": [
+              "daily_dose"
+            ]
+          }
         },
-        "schemaDescription": "Поддерживающая доза составляет 200 мг в сутки в два приема (утром и вечером)."
+        "schemaDescription": "Острый период: три внутривенные болюсные инъекции по 5 мг с 2-минутным интервалом (всего 15 мг) в отделении кардиореанимации. Через 15 минут после последней инъекции при хорошей переносимости — 50 мг внутрь 4 раза в сутки в течение 48 часов. Поддерживающая терапия: 200 мг в сутки в два приема (утром и вечером) длительно для снижения смертности и риска повторного инфаркта."
       }
     },
     {
@@ -144,15 +116,7 @@
         "intervalUnit": "DAY",
         "intakeCount": 1,
         "daily_dose": 200,
-        "courseDurationMin": "P1Y",
-        "courseDurationMax": "P1Y",
-        "courseMaxF": {
-          "expr": "daily_dose*365",
-          "vars": [
-            "daily_dose"
-          ]
-        },
-        "schemaDescription": "100 мг один раз в сутки, рекомендуется принимать таблетку утром. При необходимости доза может быть увеличена до 200 мг."
+        "schemaDescription": "100 мг один раз в сутки, рекомендуется принимать таблетку утром; при необходимости доза может быть увеличена до 200 мг."
       }
     },
     {
@@ -165,19 +129,11 @@
         "intervalUnit": "DAY",
         "intakeCount": 2,
         "daily_dose": 200,
-        "courseDurationMin": "P1Y",
-        "courseDurationMax": "P1Y",
-        "courseMaxF": {
-          "expr": "daily_dose*365",
-          "vars": [
-            "daily_dose"
-          ]
-        },
-        "schemaDescription": "100–200 мг в сутки в два приема (утром и вечером)."
+        "schemaDescription": "100–200 мг в сутки в два приема (утром и вечером) для профилактики приступов мигрени."
       }
     },
     {
-      "tags": "adult; Гипертиреоз [E05]",
+      "tags": "adult; Гипертиреоз (комплексная терапия) [E05]",
       "indication": {
         "startDosage": 150,
         "dose": "150-200",
@@ -186,22 +142,14 @@
         "intervalUnit": "DAY",
         "intakeCount": 3,
         "daily_dose": 200,
-        "courseDurationMin": "P1Y",
-        "courseDurationMax": "P1Y",
-        "courseMaxF": {
-          "expr": "daily_dose*365",
-          "vars": [
-            "daily_dose"
-          ]
-        },
-        "schemaDescription": "150–200 мг в сутки в 3-4 приема."
+        "schemaDescription": "150–200 мг в сутки в 3–4 приема в составе комплексной терапии гипертиреоза."
       }
     }
   ],
   "administration": {
     "time": "утром",
     "food": "до еды",
-    "form": "таблетки",
-    "how": "внутрь"
+    "form": "таблетка",
+    "how": "перорально"
   }
 }

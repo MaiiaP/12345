@@ -73,7 +73,8 @@ def humanize_iso_duration(value: str) -> str:
 
 def humanize_value(key: str, value: Any) -> Any:
     if isinstance(value, str) and key in {"courseDurationMin", "courseDurationMax", "courseDuration"}:
-        return humanize_iso_duration(value)
+        # Keep exact ISO value from JSON (e.g., P83D) without rounding/conversion.
+        return value
     if key == "intervalUnit":
         mapping = {"DAY": "день", "WEEK": "неделя", "MONTH": "месяц", "YEAR": "год"}
         return mapping.get(str(value), value)
