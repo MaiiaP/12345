@@ -1,0 +1,207 @@
+{
+  "indications": [
+    "Артериальная гипертензия [I10]",
+    "Стенокардия [I20]",
+    "Нарушения ритма сердца [I49]",
+    "Суправентрикулярная тахикардия [I47.1]",
+    "Состояние после инфаркта миокарда [I25.2]",
+    "Функциональные нарушения сердечной деятельности, сопровождающиеся тахикардией []",
+    "Профилактика приступов мигрени [G43]",
+    "Гипертиреоз [E05]"
+  ],
+  "dosage": [
+    {
+      "tags": "adult; Артериальная гипертензия [I10]",
+      "indication": {
+        "startDosage": 100,
+        "dose": "100-200",
+        "unit": "мг",
+        "interval": 1,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 200,
+        "courseDurationMin": "P1Y",
+        "courseDurationMax": "P1Y",
+        "courseMaxF": {
+          "expr": "daily_dose*365",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "100–200 мг метопролола однократно утром или в два приема (утром и вечером). Длительная гипотензивная терапия."
+      }
+    },
+    {
+      "tags": "adult; Стенокардия [I20]",
+      "indication": {
+        "startDosage": 100,
+        "dose": "100-200",
+        "unit": "мг",
+        "interval": 1,
+        "intervalUnit": "DAY",
+        "intakeCount": 2,
+        "daily_dose": 200,
+        "courseDurationMin": "P1Y",
+        "courseDurationMax": "P1Y",
+        "courseMaxF": {
+          "expr": "daily_dose*365",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "100–200 мг в сутки в два приема (утром и вечером)."
+      }
+    },
+    {
+      "tags": "adult; Нарушения ритма сердца [I49]; Суправентрикулярная тахикардия [I47.1]",
+      "indication": {
+        "startDosage": 100,
+        "dose": "100-200",
+        "unit": "мг",
+        "interval": 1,
+        "intervalUnit": "DAY",
+        "intakeCount": 2,
+        "daily_dose": 200,
+        "courseDurationMin": "P1Y",
+        "courseDurationMax": "P1Y",
+        "courseMaxF": {
+          "expr": "daily_dose*365",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "100–200 мг в сутки в два приема (утром и вечером)."
+      }
+    },
+    {
+      "tags": "adult; Состояние после инфаркта миокарда [I25.2]; if: острый период, внутривенное введение",
+      "indication": {
+        "step1": {
+          "startDosage": 5,
+          "dose": 5,
+          "unit": "мг",
+          "interval": 2,
+          "intervalUnit": "MINUTE",
+          "intakeCount": 3,
+          "daily_dose": 15,
+          "courseDurationMin": "PT4M",
+          "courseDurationMax": "PT4M",
+          "courseMaxF": {
+            "expr": "daily_dose",
+            "vars": [
+              "daily_dose"
+            ]
+          }
+        },
+        "step2": {
+          "startDosage": 50,
+          "dose": 50,
+          "unit": "мг",
+          "interval": 1,
+          "intervalUnit": "DAY",
+          "intakeCount": 4,
+          "daily_dose": 200,
+          "courseDurationMin": "P2D",
+          "courseDurationMax": "P2D",
+          "courseMaxF": {
+            "expr": "daily_dose*2",
+            "vars": [
+              "daily_dose"
+            ]
+          }
+        },
+        "schemaDescription": "Три болюсные внутривенные инъекции по 5 мг с 2-минутным интервалом. Если пациент хорошо перенес 15 мг, через 15 минут после последней инъекции назначить 50 мг 4 раза в сутки в течение 48 часов."
+      }
+    },
+    {
+      "tags": "adult; Состояние после инфаркта миокарда [I25.2]; if: поддерживающая терапия после инфаркта",
+      "indication": {
+        "startDosage": 200,
+        "dose": 200,
+        "unit": "мг",
+        "interval": 1,
+        "intervalUnit": "DAY",
+        "intakeCount": 2,
+        "daily_dose": 200,
+        "courseDurationMin": "P1Y",
+        "courseDurationMax": "P1Y",
+        "courseMaxF": {
+          "expr": "daily_dose*365",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "Поддерживающая доза составляет 200 мг в сутки в два приема (утром и вечером)."
+      }
+    },
+    {
+      "tags": "adult; Функциональные нарушения сердечной деятельности, сопровождающиеся тахикардией []",
+      "indication": {
+        "startDosage": 100,
+        "dose": "100-200",
+        "unit": "мг",
+        "interval": 1,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 200,
+        "courseDurationMin": "P1Y",
+        "courseDurationMax": "P1Y",
+        "courseMaxF": {
+          "expr": "daily_dose*365",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "100 мг один раз в сутки, рекомендуется принимать таблетку утром. При необходимости доза может быть увеличена до 200 мг."
+      }
+    },
+    {
+      "tags": "adult; Профилактика приступов мигрени [G43]",
+      "indication": {
+        "startDosage": 100,
+        "dose": "100-200",
+        "unit": "мг",
+        "interval": 1,
+        "intervalUnit": "DAY",
+        "intakeCount": 2,
+        "daily_dose": 200,
+        "courseDurationMin": "P1Y",
+        "courseDurationMax": "P1Y",
+        "courseMaxF": {
+          "expr": "daily_dose*365",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "100–200 мг в сутки в два приема (утром и вечером)."
+      }
+    },
+    {
+      "tags": "adult; Гипертиреоз [E05]",
+      "indication": {
+        "startDosage": 150,
+        "dose": "150-200",
+        "unit": "мг",
+        "interval": 1,
+        "intervalUnit": "DAY",
+        "intakeCount": 3,
+        "daily_dose": 200,
+        "courseDurationMin": "P1Y",
+        "courseDurationMax": "P1Y",
+        "courseMaxF": {
+          "expr": "daily_dose*365",
+          "vars": [
+            "daily_dose"
+          ]
+        },
+        "schemaDescription": "150–200 мг в сутки в 3-4 приема."
+      }
+    }
+  ],
+  "administration": {
+    "time": "утром",
+    "food": "до еды",
+    "form": "таблетки",
+    "how": "внутрь"
+  }
+}
