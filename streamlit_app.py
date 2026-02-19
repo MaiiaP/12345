@@ -12,8 +12,11 @@ from pdf2image import convert_from_path
 
 
 BASE_DIR = Path(__file__).resolve().parent
-RESULTS_DIR = BASE_DIR / "data" / "results"
-PDF_DIR = BASE_DIR / "data" / "pdfs"
+REPO_DATA_DIR = BASE_DIR.parent / "data"
+LOCAL_DATA_DIR = BASE_DIR / "data"
+DATA_DIR = LOCAL_DATA_DIR if LOCAL_DATA_DIR.exists() else REPO_DATA_DIR
+RESULTS_DIR = DATA_DIR / "results"
+PDF_DIR = DATA_DIR / "pdfs"
 
 KEY_LABELS_RU = {
     "indications": "Показания",
