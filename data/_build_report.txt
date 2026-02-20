@@ -1,4 +1,0 @@
-results_count=11
-sources_count=11
-pdfs_copied=11
-pdfs_missing=0

@@ -1,0 +1,120 @@
+{
+  "indications": [
+    "Гиповитаминоз витамина С []",
+    "Повышенная потребность организма в витамине С в период роста []",
+    "Повышенная потребность организма в витамине С в период беременности []",
+    "Повышенная потребность организма в витамине С в период грудного вскармливания []",
+    "Повышенные физические нагрузки []",
+    "Повышенные умственные нагрузки []",
+    "Переутомление []",
+    "Стрессовые состояния []",
+    "Период выздоровления после длительных и тяжелых заболеваний []"
+  ],
+  "dosage": [
+    {
+      "tags": "adult",
+      "indication": {
+        "step1": {
+          "startDosage": 50,
+          "dose": "50-100",
+          "unit": "мг",
+          "interval": 1,
+          "intervalUnit": "DAY",
+          "intakeCount": 1,
+          "daily_dose": 100,
+          "schemaDescription": "С профилактической целью Взрослым назначают по 50 – 100 мг/сут."
+        },
+        "step2": {
+          "startDosage": 50,
+          "dose": "50-100",
+          "unit": "мг",
+          "interval": 1,
+          "intervalUnit": "DAY",
+          "intakeCount": "3-5",
+          "daily_dose": 1000,
+          "schemaDescription": "С лечебной целью Взрослым назначают по 50 – 100 мг 3 – 5 раз в день. Максимальная суточная доза для взрослых – 1000 мг."
+        },
+        "schemaDescription": "С профилактической целью Взрослым назначают по 50 – 100 мг/сут. С лечебной целью Взрослым назначают по 50 – 100 мг 3 – 5 раз в день. Максимальная суточная доза для взрослых – 1000 мг."
+      }
+    },
+    {
+      "tags": "adult; if: беременность и лактация",
+      "indication": {
+        "step1": {
+          "startDosage": 300,
+          "dose": 300,
+          "unit": "мг",
+          "interval": 1,
+          "intervalUnit": "DAY",
+          "intakeCount": 1,
+          "daily_dose": 300,
+          "courseDurationMin": "P10D",
+          "courseDurationMax": "P15D",
+          "courseMaxF": {
+            "expr": "daily_dose*15",
+            "vars": [
+              "daily_dose"
+            ]
+          },
+          "schemaDescription": "В период беременности и лактации назначают по 300 мг/сутки в течение 10 – 15 дней, затем по 100 мг/сут."
+        },
+        "step2": {
+          "startDosage": 100,
+          "dose": 100,
+          "unit": "мг",
+          "interval": 1,
+          "intervalUnit": "DAY",
+          "intakeCount": 1,
+          "daily_dose": 100,
+          "schemaDescription": "В период беременности и лактации назначают по 300 мг/сутки в течение 10 – 15 дней, затем по 100 мг/сут."
+        },
+        "schemaDescription": "В период беременности и лактации назначают по 300 мг/сутки в течение 10 – 15 дней, затем по 100 мг/сут."
+      }
+    },
+    {
+      "tags": "child (14-18)",
+      "indication": {
+        "startDosage": 75,
+        "dose": 75,
+        "unit": "мг",
+        "interval": 1,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 75,
+        "schemaDescription": "С профилактической целью детям от 14 до 18 лет Назначают 75 мг в сутки."
+      }
+    },
+    {
+      "tags": "child (6-14)",
+      "indication": {
+        "startDosage": 50,
+        "dose": 50,
+        "unit": "мг",
+        "interval": 1,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 50,
+        "schemaDescription": "С профилактической целью детям от 6 до 14 лет Назначают 50 мг в сутки."
+      }
+    },
+    {
+      "tags": "child",
+      "indication": {
+        "startDosage": 50,
+        "dose": "50-100",
+        "unit": "мг",
+        "interval": 1,
+        "intervalUnit": "DAY",
+        "intakeCount": "2-3",
+        "daily_dose": 500,
+        "schemaDescription": "С лечебной целью Назначают по 50 – 100 мг 2 – 3 раза в день. Максимальная суточная доза для детей – 500 мг."
+      }
+    }
+  ],
+  "administration": {
+    "time": "не указано",
+    "food": "после еды",
+    "form": "таблетка",
+    "how": "перорально"
+  }
+}

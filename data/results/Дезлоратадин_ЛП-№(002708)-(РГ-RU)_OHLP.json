@@ -1,0 +1,74 @@
+{
+  "indications": [
+    "Аллергический ринит []",
+    "Крапивница []"
+  ],
+  "dosage": [
+    {
+      "tags": "adult",
+      "indication": {
+        "dose": 5,
+        "unit": "мг",
+        "interval": 1,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 5,
+        "schemaDescription": "Рекомендованная доза для взрослых: по 5 мг (10 мл сиропа) 1 раз в сутки."
+      }
+    },
+    {
+      "tags": "child (12-17)",
+      "indication": {
+        "dose": 5,
+        "unit": "мг",
+        "interval": 1,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 5,
+        "schemaDescription": "Режим дозирования у детей от 12 лет соответствует режиму дозирования у взрослых."
+      }
+    },
+    {
+      "tags": "child (6-11)",
+      "indication": {
+        "dose": 2.5,
+        "unit": "мг",
+        "interval": 1,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 2.5,
+        "schemaDescription": "Дети в возрасте от 6 до 11 лет – по 2,5 мг (5 мл сиропа) 1 раз в сутки."
+      }
+    },
+    {
+      "tags": "child (1-5)",
+      "indication": {
+        "dose": 1.25,
+        "unit": "мг",
+        "interval": 1,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 1.25,
+        "schemaDescription": "Дети в возрасте от 1 года до 5 лет – по 1,25 мг (2,5 мл сиропа) 1 раз в сутки."
+      }
+    },
+    {
+      "tags": "child (0.5-0.9)",
+      "indication": {
+        "dose": 1,
+        "unit": "мг",
+        "interval": 1,
+        "intervalUnit": "DAY",
+        "intakeCount": 1,
+        "daily_dose": 1,
+        "schemaDescription": "Дети в возрасте от 6 до 12 месяцев – по 1 мг (2 мл сиропа) 1 раз в сутки."
+      }
+    }
+  ],
+  "administration": {
+    "time": "",
+    "food": "независимо от времени приема пищи",
+    "form": "сироп",
+    "how": "внутрь"
+  }
+}
